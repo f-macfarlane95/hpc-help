@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Overview &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Requesting an Account" href="user-accounts.html" />
+    <link rel="prev" title="Frequently Asked Questions" href="faq.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">System Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compute-cluster">Compute cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#storage-and-backup">Storage and backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#virtual-infrastructure">Virtual infrastructure</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>System Overview</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/system-overview.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="system-overview">
+<h1>System Overview<a class="headerlink" href="#system-overview" title="Permalink to this headline"></a></h1>
+<p>You can monitor the current state of the cluster using:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.cropdiversity.ac.uk/top">https://www.cropdiversity.ac.uk/top</a> - job/allocation based overview</p></li>
+<li><p><a class="reference external" href="https://ganglia.cropdiversity.ac.uk">https://ganglia.cropdiversity.ac.uk</a> - detailed stats per node</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Everything listed below is connected together over a super-fast 25-gigabit fibre optic network.</p>
+</div>
+<section id="compute-cluster">
+<h2>Compute cluster<a class="headerlink" href="#compute-cluster" title="Permalink to this headline"></a></h2>
+<p>The tables below list the various batches of hardware the make up the current cluster, with each set of nodes named something ‘fun’ on a (geeky) thematic basis.</p>
+<ul class="simple">
+<li><p><strong>Year</strong>: 2021</p></li>
+<li><p><strong>Theme</strong>: Buck Rogers</p></li>
+<li><p><strong>Hardware</strong>: Dell PowerEdge R7525 (2x)</p></li>
+<li><p><strong>CPUs/GPUs</strong>: 2nd-Gen AMD EPYC (Rome) / Nvidia Quadro</p></li>
+<li><p><strong>Capacity</strong>: 80 CPU cores (160 threads), 9,216 Cuda cores, and 1,152 Tensor cores</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 38%" />
+<col style="width: 21%" />
+<col style="width: 8%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>GPUs</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>Disk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>buck</p></td>
+<td><p>2x 7502 &#64;2.5GHz 32C/64T</p></td>
+<td></td>
+<td><p>2.0 TB</p></td>
+<td><p>890 GB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>twiki</p></td>
+<td><p>2x 7252 &#64;3.1GHz 8C/16T</p></td>
+<td><p>2x RTX 8000 48GB</p></td>
+<td><p>256 GB</p></td>
+<td><p>440 GB (SSD)</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Year</strong>: 2019 (October)</p></li>
+<li><p><strong>Theme</strong>: Marvel Cinematic Universe</p></li>
+<li><p><strong>Hardware</strong>: Dell PowerEdge C6420 (48x) and R940xa (1x)</p></li>
+<li><p><strong>CPUs/GPUs</strong>: 2nd-Gen Intel Xeon Scalable (Cascade Lake) / Nvidia Tesla</p></li>
+<li><p><strong>Capacity</strong>: 1,600 CPU cores (3,200 threads), 10,240 Cuda cores, and 1,280 Tensor cores</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 41%" />
+<col style="width: 16%" />
+<col style="width: 8%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>GPUs</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>Disk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>abomination</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>antman</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>blackpanther</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>blackwidow</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>captainamerica</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>captainmarvel</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>crossbones</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>doctorstrange</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>drax</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ego</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>falcon</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>gamora</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>ghost</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>groot</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>hawkeye</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>heimdall</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>hela</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>hulk</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>ironman</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>kaeciliu</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>killmonger</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>loki</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>malekith</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>mandarin</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>mantis</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>mysterio</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>nebula</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>odin</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>quicksilver</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>redskull</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>rocket</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ronan</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>scarletwitch</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>spiderman</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>starlord</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>taserface</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>thanos</p></td>
+<td><p>4x Gold 6242 &#64;2.8Ghz 16C/32T</p></td>
+<td><p>2x V100 32GB</p></td>
+<td><p>3.0 TB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>thor</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>ultron</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>valkyrie</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>vision</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>vulture</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>warmachine</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>wasp</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>whiplash</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>wintersolider</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>wong</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>yellowjacket</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>yondu</p></td>
+<td><p>2x Silver 4216 &#64;2.1Ghz 16C/32T</p></td>
+<td></td>
+<td><p>192 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Year</strong>: 2019 (March)</p></li>
+<li><p><strong>Theme</strong>: Bond Villians</p></li>
+<li><p><strong>Hardware</strong>: Dell PowerEdge R640 (2x) and R740 (1x)</p></li>
+<li><p><strong>CPUs/GPUs</strong>: 1st-Gen Intel Xeon Scalable (Skylake) / Nvidia Tesla</p></li>
+<li><p><strong>Capacity</strong>: 80 CPU cores (160 threads), 5,120 Cuda cores, and 640 Tensor cores</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 40%" />
+<col style="width: 17%" />
+<col style="width: 8%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>GPUs</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>Disk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>jaws</p></td>
+<td><p>2x Silver 4116 &#64;2.1GHz 12C/24T</p></td>
+<td><p>1x V100 16GB</p></td>
+<td><p>192 GB</p></td>
+<td><p>900 GB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>oddjob</p></td>
+<td><p>2x Gold 6132 &#64;2.6GHz 14C/28T</p></td>
+<td></td>
+<td><p>384 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>nicknack</p></td>
+<td><p>2x Gold 6132 &#64;2.6GHz 14C/28T</p></td>
+<td></td>
+<td><p>384 GB</p></td>
+<td><p>1.3 TB (SSD)</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>Year</strong>: 2017</p></li>
+<li><p><strong>Theme</strong>: Battlestar Galactica</p></li>
+<li><p><strong>Hardware</strong>: Dell PowerEdge R630 (3x)</p></li>
+<li><p><strong>CPUs</strong>: Intel E5 v4 (Broadwell)</p></li>
+<li><p><strong>Capacity</strong>: 84 CPU cores (168 threads)</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 40%" />
+<col style="width: 17%" />
+<col style="width: 8%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>GPUs</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>Disk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>apollo</p></td>
+<td><p>2x E5-2680 v4 &#64;2.4GHz 14C/24T</p></td>
+<td></td>
+<td><p>1.5 TB</p></td>
+<td><p>370 GB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>boomer</p></td>
+<td><p>2x E5-2680 v4 &#64;2.4GHz 14C/24T</p></td>
+<td></td>
+<td><p>256 GB</p></td>
+<td><p>370 GB (SSD)</p></td>
+</tr>
+<tr class="row-even"><td><p>starbuck</p></td>
+<td><p>2x E5-2680 v4 &#64;2.4GHz 14C/24T</p></td>
+<td></td>
+<td><p>256 GB</p></td>
+<td><p>370 GB (SSD)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="storage-and-backup">
+<h2>Storage and backup<a class="headerlink" href="#storage-and-backup" title="Permalink to this headline"></a></h2>
+<p>The BeeGFS storage array runs alongside the cluster, however the backup system is located in another location for redundancy.</p>
+<ul class="simple">
+<li><p><strong>Year</strong>: 2019 (October)</p></li>
+<li><p><strong>Theme</strong>: Back to the Future / Discworld</p></li>
+<li><p><strong>Hardware</strong>: Dell PowerEdge R740xa (4x), MD1400 (4x), R640 (1x), and ME484 (1x)</p></li>
+<li><p><strong>CPUs</strong>: 2nd-Gen Intel Xeon Scalable (Cascade Lake)</p></li>
+<li><p><strong>Capacity</strong>: 1.5 PB (storage) and 1.0 PB (backup)</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 46%" />
+<col style="width: 10%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>Disk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>delorean</p></td>
+<td><p>2x Silver 4208 &#64;2.1G 8C/16T</p></td>
+<td><p>32 GB</p></td>
+<td><p>240 GB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>delorean (exp)</p></td>
+<td></td>
+<td></td>
+<td><p>1.0 PB (HDD)</p></td>
+</tr>
+<tr class="row-even"><td><p>librarian</p></td>
+<td><p>2x Silver 4208 &#64;2.1G 8C/16T</p></td>
+<td><p>192 GB</p></td>
+<td><p>3.8 TB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>rincewind</p></td>
+<td><p>2x Silver 4210 &#64;2.2G 10C/20T</p></td>
+<td><p>96 GB</p></td>
+<td><p>288 TB (HDD)</p></td>
+</tr>
+<tr class="row-even"><td><p>twoflower</p></td>
+<td><p>2x Silver 4210 &#64;2.2G 10C/20T</p></td>
+<td><p>96 GB</p></td>
+<td><p>288 TB (HDD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>death</p></td>
+<td><p>2x Silver 4210 &#64;2.2G 10C/20T</p></td>
+<td><p>96 GB</p></td>
+<td><p>288 TB (HDD)</p></td>
+</tr>
+<tr class="row-even"><td><p>luggage</p></td>
+<td><p>2x Silver 4210 &#64;2.2G 10C/20T</p></td>
+<td><p>96 GB</p></td>
+<td><p>288 TB (HDD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>rincewind (exp)</p></td>
+<td></td>
+<td></td>
+<td><p>144 TB (HDD)</p></td>
+</tr>
+<tr class="row-even"><td><p>twoflower (exp)</p></td>
+<td></td>
+<td></td>
+<td><p>144 TB (HDD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>death (exp)</p></td>
+<td></td>
+<td></td>
+<td><p>144 TB (HDD)</p></td>
+</tr>
+<tr class="row-even"><td><p>luggage (exp)</p></td>
+<td></td>
+<td></td>
+<td><p>144 TB (HDD)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="virtual-infrastructure">
+<h2>Virtual infrastructure<a class="headerlink" href="#virtual-infrastructure" title="Permalink to this headline"></a></h2>
+<p>The rest of the infrastructure runs on VMWare ESXi hosts, with various virtual machines (VMs) for handling web servers and applications, databases, domain control, monitoring, remote access, etc. Although they have a small amount of local disk, the VMs primarily use a separate Storage Area Network (SAN) for data.</p>
+<ul class="simple">
+<li><p><strong>Year</strong>: 2019 (October)</p></li>
+<li><p><strong>Hardware</strong>: Dell PowerEdge R640 (2x)</p></li>
+<li><p><strong>CPUs</strong>: 2nd-Gen Intel Xeon Scalable (Cascade Lake)</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 48%" />
+<col style="width: 10%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>CPUs</p></th>
+<th class="head"><p>Memory</p></th>
+<th class="head"><p>Disk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hpcvmh01</p></td>
+<td><p>2x Gold 6242 CPU &#64;2.8G 16C/32T</p></td>
+<td><p>384 GB</p></td>
+<td><p>240 GB (SSD)</p></td>
+</tr>
+<tr class="row-odd"><td><p>hpcvmh02</p></td>
+<td><p>2x Gold 6242 CPU &#64;2.8G 16C/32T</p></td>
+<td><p>384 GB</p></td>
+<td><p>240 GB (SSD)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="faq.html" class="btn btn-neutral float-left" title="Frequently Asked Questions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="user-accounts.html" class="btn btn-neutral float-right" title="Requesting an Account" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

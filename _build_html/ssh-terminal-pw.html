@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terminal Clients Connection Guide (Passwords) &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Terminal Clients Connection Guide (Passwords)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/ssh-terminal-pw.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="terminal-clients-connection-guide-passwords">
+<h1>Terminal Clients Connection Guide (Passwords)<a class="headerlink" href="#terminal-clients-connection-guide-passwords" title="Permalink to this headline"></a></h1>
+<p>To connect to the system this way, you first need to be onsite at one of our <a class="reference internal" href="organizations.html"><span class="doc">Supported Organisations</span></a> so that your IP address is recognised.</p>
+<p>Open your local terminal application and then connect to <code class="docutils literal notranslate"><span class="pre">gruffalo</span></code> by issuing the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh &lt;username&gt;@gruffalo.cropdiversity.ac.uk
+</pre></div>
+</div>
+<p>Remembering to replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> with the actual username you have been assigned.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always provide your username in lowercase characters.</p>
+</div>
+<p>If you are connecting for the first time with your current laptop or PC, then you’ll need to accept <code class="docutils literal notranslate"><span class="pre">gruffalo's</span></code> public SSH host key, which should match one of the six fingerprint values shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RSA</span>     <span class="n">SHA256</span> <span class="p">:</span> <span class="mi">27</span><span class="n">bXQAwDYqyvNIMujn9d5bE9elgk</span><span class="o">+</span><span class="n">KF3UJMNjRAuNKA</span>
+<span class="n">ECDSA</span>   <span class="n">SHA256</span> <span class="p">:</span> <span class="n">ORFcun5bSbLPQ8uCW</span><span class="o">/</span><span class="n">R1yqvXbfvhHGuDWkSzRhHARzY</span>
+<span class="n">ED25519</span> <span class="n">SHA256</span> <span class="p">:</span> <span class="n">x9XTBSIWPynrVFRcK1HGokuUTxXHgMFhijKoD6ptNuo</span>
+<span class="n">ECDSA</span>   <span class="n">MD5</span>    <span class="p">:</span> <span class="mi">97</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="mi">1</span><span class="n">a</span><span class="p">:</span><span class="mi">57</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span><span class="n">ac</span><span class="p">:</span><span class="mi">3</span><span class="n">a</span><span class="p">:</span><span class="mi">3</span><span class="n">b</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">5</span><span class="n">d</span><span class="p">:</span><span class="mi">2</span><span class="n">b</span><span class="p">:</span><span class="n">d7</span><span class="p">:</span><span class="n">c3</span><span class="p">:</span><span class="n">f6</span><span class="p">:</span><span class="mi">61</span><span class="p">:</span><span class="n">e3</span>
+<span class="n">ED25519</span> <span class="n">MD5</span>    <span class="p">:</span> <span class="n">e0</span><span class="p">:</span><span class="mi">95</span><span class="p">:</span><span class="mi">5</span><span class="n">e</span><span class="p">:</span><span class="mi">1</span><span class="n">d</span><span class="p">:</span><span class="mi">3</span><span class="n">f</span><span class="p">:</span><span class="mi">74</span><span class="p">:</span><span class="mi">67</span><span class="p">:</span><span class="mi">82</span><span class="p">:</span><span class="mi">86</span><span class="p">:</span><span class="n">a0</span><span class="p">:</span><span class="n">be</span><span class="p">:</span><span class="mi">9</span><span class="n">a</span><span class="p">:</span><span class="mi">70</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mi">5</span><span class="n">c</span><span class="p">:</span><span class="n">f1</span>
+<span class="n">RSA</span>     <span class="n">MD5</span>    <span class="p">:</span> <span class="mi">71</span><span class="p">:</span><span class="n">ec</span><span class="p">:</span><span class="mi">9</span><span class="n">c</span><span class="p">:</span><span class="mi">2</span><span class="n">c</span><span class="p">:</span><span class="n">fb</span><span class="p">:</span><span class="mi">60</span><span class="p">:</span><span class="mi">7</span><span class="n">c</span><span class="p">:</span><span class="n">a7</span><span class="p">:</span><span class="mi">76</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="n">a3</span><span class="p">:</span><span class="mi">3</span><span class="n">a</span><span class="p">:</span><span class="mi">4</span><span class="n">b</span><span class="p">:</span><span class="n">cc</span><span class="p">:</span><span class="n">e7</span><span class="p">:</span><span class="mi">04</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Do not connect if the host key is different as it could be a sign that the server has been compromised or that your connection is being interfered with. You should <a class="reference internal" href="contact-us.html"><span class="doc">Contact Us</span></a> before proceeding.</p>
+</div>
+<p>If all is well, then accept the host key by typing <code class="docutils literal notranslate"><span class="pre">yes</span></code>.</p>
+<p>You’ll then be asked for your password. Enter it to continue, noting that Linux will not echo what you type to the screen.</p>
+<p>If you’re connecting for the very first time, you’ll also have to change your password. The system will ask you to enter your current password <strong>again</strong>, before prompting you to enter a new password <strong>twice</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Our password policy requires passwords with a length of 12 or greater, containing at least 3 of the following 5 classes: lowercase characters; uppercase characters; digits; special characters, such as comma (,), period (.), asterisk (*); other UTF-8 characters.</p>
+</div>
+<p>You can make subsequent connections faster, by editing your local <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file to include the following lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">gruffalo</span>
+  <span class="n">Hostname</span> <span class="n">gruffalo</span><span class="o">.</span><span class="n">cropdiversity</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span>
+  <span class="n">User</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>You’ll then be able to connect using just <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">gruffalo</span></code>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

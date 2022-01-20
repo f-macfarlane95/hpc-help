@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenMPI &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Green Computing" href="green-computing.html" />
+    <link rel="prev" title="Database Mirrors" href="database-mirrors.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OpenMPI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-submit-mpi-jobs">How to submit MPI jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>OpenMPI</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/openmpi.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="openmpi">
+<h1>OpenMPI<a class="headerlink" href="#openmpi" title="Permalink to this headline"></a></h1>
+<p>Many programs require a <strong>Message Passing Interface</strong> (MPI) to communicate between processes running on different CPUs across different physical hosts. On our cluster, OpenMPI 4.1.1 is available for use in these cases.</p>
+<p>You can give it a quick test to confirm everything is in order by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ srun -N 2 -n 2 mpirun hostname
+n19-32-192-hela
+n19-32-192-hela
+n19-32-192-hulk
+n19-32-192-hulk
+</pre></div>
+</div>
+<section id="how-to-submit-mpi-jobs">
+<h2>How to submit MPI jobs<a class="headerlink" href="#how-to-submit-mpi-jobs" title="Permalink to this headline"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>OpenMPI is integrated with Slurm (see <a class="reference internal" href="slurm-overview.html"><span class="doc">Slurm - Overview</span></a>) and jobs should <strong>always</strong> be submitted via Slurm, rather than by calling <code class="docutils literal notranslate"><span class="pre">mpirun</span></code> directly.</p>
+</div>
+<p>Let’s look at a simple example of submitting an MPI program via Slurm, using MPI’s take on the familiar Hello World programming example. Place the following into a file called <code class="docutils literal notranslate"><span class="pre">hellompi.c</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
+<span class="c1">#include &lt;stdlib.h&gt;</span>
+<span class="c1">#include &lt;mpi.h&gt;</span>
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="nb">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[],</span> <span class="n">char</span> <span class="o">*</span><span class="n">envp</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="nb">int</span> <span class="n">numprocs</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">namelen</span><span class="p">;</span>
+  <span class="n">char</span> <span class="n">processor_name</span><span class="p">[</span><span class="n">MPI_MAX_PROCESSOR_NAME</span><span class="p">];</span>
+
+  <span class="n">MPI_Init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">);</span>
+  <span class="n">MPI_Comm_size</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">numprocs</span><span class="p">);</span>
+  <span class="n">MPI_Comm_rank</span><span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">rank</span><span class="p">);</span>
+  <span class="n">MPI_Get_processor_name</span><span class="p">(</span><span class="n">processor_name</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">namelen</span><span class="p">);</span>
+
+  <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Process </span><span class="si">%d</span><span class="s2"> on </span><span class="si">%s</span><span class="s2"> out of </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">processor_name</span><span class="p">,</span> <span class="n">numprocs</span><span class="p">);</span>
+
+  <span class="n">MPI_Finalize</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And then compile as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mpicc hellompi.c -o hellompi
+</pre></div>
+</div>
+<p>This uses OpenMPI to compile the source code into a binary called <code class="docutils literal notranslate"><span class="pre">hellompi</span></code>.</p>
+<p>We can then use a Slurm script for submission to the cluster. In <code class="docutils literal notranslate"><span class="pre">run.sh</span></code> we place:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --ntasks=128</span>
+
+<span class="c1"># Run the hellompi program with mpirun. The -n flag is not required;</span>
+<span class="c1"># mpirun will automatically figure out the best configuration from the</span>
+<span class="c1"># Slurm environment variables.</span>
+<span class="n">mpirun</span> <span class="o">./</span><span class="n">hellompi</span>
+</pre></div>
+</div>
+<p>And then submit with <code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">run.sh</span></code>. You should end up with an output file similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tail slurm-[id].out
+Process 81 on n19-32-192-loki out of 128
+Process 74 on n19-32-192-killmonger out of 128
+Process 58 on n19-32-192-kaecilius out of 128
+Process 46 on n19-32-192-ironman out of 128
+Process 20 on n19-32-192-hulk out of 128
+Process 126 on n19-32-192-mandarin out of 128
+Process 111 on n19-32-192-malekith out of 128
+Process 83 on n19-32-192-loki out of 128
+Process 65 on n19-32-192-killmonger out of 128
+Process 70 on n19-32-192-killmonger out of 128
+</pre></div>
+</div>
+<p>You can also wrap MPI jobs directly using <code class="docutils literal notranslate"><span class="pre">srun</span></code> as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ srun -N 4 -n 4 ./hellompi
+Process 0 on n19-32-192-hulk out of 4
+Process 1 on n19-32-192-ironman out of 4
+Process 2 on n19-32-192-kaecilius out of 4
+Process 3 on n19-32-192-killmonger out of 4
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When using <code class="docutils literal notranslate"><span class="pre">srun</span></code> to execute MPI programs, you don’t need to use <code class="docutils literal notranslate"><span class="pre">mpirun</span></code>.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="database-mirrors.html" class="btn btn-neutral float-left" title="Database Mirrors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="green-computing.html" class="btn btn-neutral float-right" title="Green Computing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

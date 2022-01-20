@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Storage &amp; Management Policy &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Backups" href="backups.html" />
+    <link rel="prev" title="Green Computing" href="green-computing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Storage &amp; Management Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#storage-at-a-glance">Storage at-a-glance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-management">Data management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beegfs-storage">BeeGFS storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project-data">Project data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-home-folders">User home folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shared-scratch">Shared scratch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-applications">User applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#local-scratch">Local scratch</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Data Storage &amp; Management Policy</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/data-storage.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-storage-management-policy">
+<h1>Data Storage &amp; Management Policy<a class="headerlink" href="#data-storage-management-policy" title="Permalink to this headline"></a></h1>
+<section id="storage-at-a-glance">
+<h2>Storage at-a-glance<a class="headerlink" href="#storage-at-a-glance" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p>The cluster has approximately 1.5 PB of storage available</p></li>
+<li><p>Most user-accessible folders are found under <code class="docutils literal notranslate"><span class="pre">/mnt/shared</span></code></p></li>
+<li><p>You may need to contact an administrator when starting a new project</p></li>
+<li><p>All important project data should be kept in <code class="docutils literal notranslate"><span class="pre">/mnt/shared/projects</span></code></p></li>
+<li><p>Intermediate working data should be kept on a <strong>scratch</strong> drive</p></li>
+<li><p>Please restrict data in <code class="docutils literal notranslate"><span class="pre">/home</span></code> to small and/or miscellaneous files; total usage here should be under 10 GB</p></li>
+</ul>
+<p>You can check your current data usage using the <a class="reference internal" href="monitoring.html"><span class="doc">Monitoring &amp; Tracking</span></a> page.</p>
+</section>
+<section id="data-management">
+<h2>Data management<a class="headerlink" href="#data-management" title="Permalink to this headline"></a></h2>
+<p>There are two main locations for storing data on the system:</p>
+<ul class="simple">
+<li><p>BeeGFS shared network storage</p></li>
+<li><p>Node-specific local scratch storage</p></li>
+</ul>
+<p>Where you decide to store data will have an effect on performance, available capacity, and backup policies, so it’s important that you understand the differences between the storage locations and the folders they contain. These are described in more detail below.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Many of the locations listed here are automatically added (as symlinks) to your home folder.</p>
+</div>
+</section>
+<section id="beegfs-storage">
+<h2>BeeGFS storage<a class="headerlink" href="#beegfs-storage" title="Permalink to this headline"></a></h2>
+<p>The cluster’s primary storage is a high-performance parallel file system running <strong>BeeGFS</strong>. This system, dsitributed across five servers and expansion units, has <strong>1.5 PB</strong> of capacity offered as a single global namespace - <code class="docutils literal notranslate"><span class="pre">/mnt/shared</span></code> - that is visible from all nodes of the cluster.</p>
+<p>It holds the following data:</p>
+<section id="project-data">
+<h3>Project data<a class="headerlink" href="#project-data" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><strong>Path:</strong> <code class="docutils literal notranslate"><span class="pre">/mnt/shared/projects</span></code></p></li>
+<li><p><strong>Shortcut:</strong> <code class="docutils literal notranslate"><span class="pre">$PROJECTS</span></code></p></li>
+<li><p><strong>Backed up:</strong> yes</p></li>
+</ul>
+<p>All important Institute-related project data should be stored in <code class="docutils literal notranslate"><span class="pre">/mnt/shared/projects</span></code>.</p>
+<p>The Projects folder holds subfolders for the <a class="reference internal" href="organizations.html"><span class="doc">Supported Organisations</span></a> (eg <code class="docutils literal notranslate"><span class="pre">/mnt/shared/projects/jhi</span></code>) and there may be further (local) guidelines on how you should structure your data below this point.</p>
+<p>Joint projects shared between multiple institutes are located in <code class="docutils literal notranslate"><span class="pre">/mnt/shared/projects/joint</span></code>. Please <a class="reference internal" href="contact-us.html"><span class="doc">Contact Us</span></a> if working on a joint project and access by multiple users is required.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>JHI/NIAB users should <a class="reference internal" href="contact-us.html"><span class="doc">Contact Us</span></a> when starting <em>any</em> new project, or to request help with moving existing data into the correct folder structure.</p>
+</div>
+</section>
+<section id="user-home-folders">
+<h3>User home folders<a class="headerlink" href="#user-home-folders" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><strong>Path:</strong> <code class="docutils literal notranslate"><span class="pre">/home/&lt;username&gt;</span></code></p></li>
+<li><p><strong>Shortcut:</strong> <code class="docutils literal notranslate"><span class="pre">$HOME</span></code></p></li>
+<li><p><strong>Backed up:</strong> yes</p></li>
+</ul>
+<p>This is where your home folder is located (your Linux equivalent of <em>My Documents</em> on Windows). Athough backed up, it’s not suitable for storing large data sets and should be restricted to small and/or miscellaneous files only – perhaps common scripts you find handy across multiple projects or random files that don’t really “fit” anywhere else.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>We’d appreciate it if your total usage within <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> can be kept to less than 10 GB.</p>
+</div>
+</section>
+<section id="shared-scratch">
+<h3>Shared scratch<a class="headerlink" href="#shared-scratch" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><strong>Path:</strong> <code class="docutils literal notranslate"><span class="pre">/mnt/shared/scratch</span></code></p></li>
+<li><p><strong>Shortcut:</strong> <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code></p></li>
+<li><p><strong>Backed up:</strong> no</p></li>
+</ul>
+<p>This area should be used for all intermediate and/or working data, and especially for large throwaway files which either do not need to be kept or can easily be regenerated. A folder is created here automatically for each user; you can structure your data below that however you see fit.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We do not have the capacity to maintain backups of intermediate/working data so it is <strong>very important</strong> that you store this kind of data on scratch.</p>
+</div>
+<p>It’s also worth noting - especially when running large or complex jobs - that job performance can be significantly enhanced if you store scratch data using node-specific scratch storage instead. Despite its high-performance, BeeGFS is still a networked filesystem and certain file operations (particularly those involving high numbers of small files) will almost always perform better using local scratch space.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Scratch data for joint projects (where access is required by multiple users) should be kept in <code class="docutils literal notranslate"><span class="pre">/mnt/shared/scratch/joint</span></code>.</p>
+</div>
+</section>
+<section id="user-applications">
+<h3>User applications<a class="headerlink" href="#user-applications" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><strong>Path:</strong> <code class="docutils literal notranslate"><span class="pre">/mnt/shared/scratch/&lt;username&gt;/apps</span></code></p></li>
+<li><p><strong>Shortcut:</strong> <code class="docutils literal notranslate"><span class="pre">$APPS</span></code></p></li>
+<li><p><strong>Backed up:</strong> no</p></li>
+</ul>
+<p>This is a special area that <strong>must</strong> be used for all downloaded (ie external) software applications – either in binary or compiled-from-source form. You can also store <a class="reference internal" href="singularity.html"><span class="doc">Apptainer (Singularity)</span></a> containers here. If you install <a class="reference internal" href="bioconda.html"><span class="doc">Bioconda</span></a>, it uses <code class="docutils literal notranslate"><span class="pre">$APPS/conda</span></code> for its data.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If something was a pain to install or compile, keep some notes about it in <code class="docutils literal notranslate"><span class="pre">/home</span></code> where they’ll be safely backed up in case you ever need to repeat the process.</p>
+</div>
+</section>
+</section>
+<section id="local-scratch">
+<h2>Local scratch<a class="headerlink" href="#local-scratch" title="Permalink to this headline"></a></h2>
+<p>Each node also has space for temporary working data, and because it’s directly attached to the node where your job is running it can be <em>significantly</em> faster for most file-based operations. The only downside is that you may have to copy your data here first, and that might take longer than just running the job from shared scratch, although often you can leave your input files on shared scratch and only produce new output on local scratch. Either way, you’ll need to remember to copy any results back to shared storage at the end of a job’s run.</p>
+<ul class="simple">
+<li><p><strong>Path:</strong> <em>dynamically generated</em></p></li>
+<li><p><strong>Shortcut:</strong> <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code></p></li>
+<li><p><strong>Backed up:</strong> no</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The path for this location is only generated (and accessible via the <code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code> environment variable) once a Slurm job has started, and is unique to that job.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Bear in mind that these scratch drives are unique per node, which means any data stored there can only be seen by that node. The contents are automatically erased when the job ends, so you <em>must</em> copy any files you need to keep back to somewhere on shared storage as the final step in your job script.</p>
+</div>
+<p>It’s also important to be aware of the differences between local scratch drives, as the different nodes may have different capacities. Check the <a class="reference internal" href="system-overview.html"><span class="doc">System Overview</span></a> page for more details.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="green-computing.html" class="btn btn-neutral float-left" title="Green Computing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="backups.html" class="btn btn-neutral float-right" title="Backups" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

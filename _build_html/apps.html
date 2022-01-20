@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools &amp; Applications &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Database Mirrors" href="database-mirrors.html" />
+    <link rel="prev" title="Machine Learning" href="machine-learning.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tools &amp; Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#aspera">Aspera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bioconda">Bioconda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#databases">Databases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#java">Java</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tools &amp; Applications</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/apps.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tools-applications">
+<h1>Tools &amp; Applications<a class="headerlink" href="#tools-applications" title="Permalink to this headline"></a></h1>
+<p>In addition to the usual selection of Linux and Bash utilities (tar, wget, rsync, htop, pigz, etc) the following applications are available system-wide:</p>
+<ul class="simple">
+<li><p>Development tools and compilers (git, svn, gcc, etc) - see <a class="reference internal" href="compiling.html"><span class="doc">Compiling Software</span></a></p></li>
+<li><p><a class="reference internal" href="openmpi.html"><span class="doc">OpenMPI</span></a></p></li>
+<li><p><a class="reference internal" href="singularity.html"><span class="doc">Apptainer (Singularity)</span></a></p></li>
+<li><p>Slurm - see <a class="reference internal" href="slurm-overview.html"><span class="doc">Slurm - Overview</span></a></p></li>
+</ul>
+<p>In general though, and in order to keep the cluster lean and mean, we <em>don’t</em> system install applications (or libraries) as it’s easier for users to manage their own specific needs using tools like <a class="reference internal" href="bioconda.html"><span class="doc">Bioconda</span></a> and <a class="reference internal" href="singularity.html"><span class="doc">Apptainer (Singularity)</span></a>, however for cases where this isn’t possible we still aim to make certain applications available (usually under <code class="docutils literal notranslate"><span class="pre">/mnt/shared/apps</span></code>) where they’re visible to all nodes of the cluster.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To run applications not located on the default path, you must provide the full path to the executable in question, eg <code class="docutils literal notranslate"><span class="pre">/mnt/shared/apps/java/13.0.2/bin/java</span></code>. This is usually the case when multiple versions exist.</p>
+</div>
+<section id="aspera">
+<h2>Aspera<a class="headerlink" href="#aspera" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/mnt/shared/apps/aspera/3.9.2</span></code></p></li>
+<li><p>On default path: <code class="docutils literal notranslate"><span class="pre">yes</span></code></p></li>
+</ul>
+<p>The <strong>Aspera</strong> client can be used to efficiently download very large data sets from remote clients (often sequencing centres).</p>
+</section>
+<section id="bioconda">
+<h2>Bioconda<a class="headerlink" href="#bioconda" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$APPS/conda</span></code> (once installed)</p></li>
+<li><p>On default path: <code class="docutils literal notranslate"><span class="pre">yes</span></code></p></li>
+</ul>
+<p><a class="reference internal" href="bioconda.html"><span class="doc">Bioconda</span></a> is a package manager that specializes in providing bioinformatics software. We have a custom install script to handle its installation for you which can be run using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ install-bioconda
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In order to maintain compatibility with the system’s backup and data policies, you should not attempt to install Bioconda using any other method than the script listed above.</p>
+</div>
+</section>
+<section id="databases">
+<h2>Databases<a class="headerlink" href="#databases" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/mnt/shared/apps/databases</span></code></p></li>
+<li><p>On default path: <code class="docutils literal notranslate"><span class="pre">n/a</span></code></p></li>
+</ul>
+<p>We maintain several popular bioinformatics <a class="reference internal" href="database-mirrors.html"><span class="doc">Database Mirrors</span></a> which are accessible over the high-performance storage network from any node in the cluster.</p>
+</section>
+<section id="java">
+<h2>Java<a class="headerlink" href="#java" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/mnt/shared/apps/java</span></code></p></li>
+<li><p>On default path: <code class="docutils literal notranslate"><span class="pre">no</span></code></p></li>
+</ul>
+<p>Updated versions of the <strong>Java JDK</strong> are available here. Rocky Linux 8 ships with JDK 8 by default, although you can also get other versions via <a class="reference internal" href="bioconda.html"><span class="doc">Bioconda</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="machine-learning.html" class="btn btn-neutral float-left" title="Machine Learning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="database-mirrors.html" class="btn btn-neutral float-right" title="Database Mirrors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
