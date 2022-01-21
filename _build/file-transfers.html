@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Transfers &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Samba Access" href="samba.html" />
+    <link rel="prev" title="Backups" href="backups.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">File Transfers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-options">Command line options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scp">scp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rsync">rsync</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#graphical-options">Graphical options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>File Transfers</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/file-transfers.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-transfers">
+<h1>File Transfers<a class="headerlink" href="#file-transfers" title="Permalink to this headline"></a></h1>
+<p>Here are some tips to help you get your data transferred to and from the cluster’s file system.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When considering your <strong>source</strong> or <strong>destination</strong> in the text below, remember that <code class="docutils literal notranslate"><span class="pre">gruffalo</span></code> - because it’s accessible from anywhere (see <a class="reference internal" href="ssh.html"><span class="doc">Getting Connected</span></a>) - can be both, but your local client may be firewalled and therefore only able to act as a source.</p>
+</div>
+<section id="command-line-options">
+<h2>Command line options<a class="headerlink" href="#command-line-options" title="Permalink to this headline"></a></h2>
+<p>There are several tools you could use, but two of the most common are <code class="docutils literal notranslate"><span class="pre">scp</span></code> (secure copy) which acts very similar to the normal <code class="docutils literal notranslate"><span class="pre">cp</span></code> (copy) command, and <code class="docutils literal notranslate"><span class="pre">rsync</span></code> which synchronizes files and folders between a source and a destination. In either case, data is transferred over an SSH connection so you should factor in SSH’s encryption overheads when comparing performance.</p>
+<p>Both of these tools have <cite>many</cite> options to tweak how they run (see the relevant man pages), but in general the basic syntax for either is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ &lt;command&gt; /path/to/source user@host:/path/to/destination
+</pre></div>
+</div>
+<section id="scp">
+<h3>scp<a class="headerlink" href="#scp" title="Permalink to this headline"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">scp</span></code> command creates a copy of a file (or a directory and its contents if using the <code class="docutils literal notranslate"><span class="pre">-r</span></code> option), copying from the source to the destination. For example, to transfer files to <code class="docutils literal notranslate"><span class="pre">gruffalo</span></code> from your local client:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scp -r /path/to/source &lt;username&gt;@gruffalo.cropdiversity.ac.uk:/path/to/destination
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pay attention to the <code class="docutils literal notranslate"><span class="pre">:</span></code> after the hostname. Miss it out and you’ll end up with a local copy of your file <em>named</em> after your destination, rather than copying it <em>to</em> your destination.</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">/path/to/destination</span></code> is optional. If you don’t include it, copied files will end up in your home folder on the destination. If you don’t provide the full path to the source, then <code class="docutils literal notranslate"><span class="pre">scp</span></code> should be executed in the directory containing the source file/directory.</p>
+</section>
+<section id="rsync">
+<h3>rsync<a class="headerlink" href="#rsync" title="Permalink to this headline"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rsync</span></code> also copies files over a network connection (employing a special <a class="reference external" href="https://rsync.samba.org/tech_report">delta transfer algorithm</a> to make things a bit faster) but supports resuming an interrupted transfer with its <code class="docutils literal notranslate"><span class="pre">-P</span></code> flag. It’s also great for keeping two folders synchronized because it only copies files not already on the destination, or that it detects are different between source and destination.</p>
+<p>A common way of synchronizing folders is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rsync -avP --delete /path/to/source &lt;username&gt;@gruffalo.cropdiversity.ac.uk:/path/to/destination
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">-avP</span></code> enables archive mode, verbose output, and resumable transfers, whereas <code class="docutils literal notranslate"><span class="pre">--delete</span></code> <em>removes</em> any files on the destination path that are no longer in the source, so use with caution!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pay attention to whether you have a trailing slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>) on the source or not. No slash means you want to copy the directory <em>and</em> its contents, whereas including a slash means you only want to copy the contents.</p>
+</div>
+<p>Here is a short video demonstration of using rsync to import a folder of data from another Linux server external to Crop Diversity.</p>
+<video controls width="320" height="240"> <source src="_static/rsync_example.mp4" type="video/mp4"></video><br></section>
+</section>
+<section id="graphical-options">
+<h2>Graphical options<a class="headerlink" href="#graphical-options" title="Permalink to this headline"></a></h2>
+<p>How to use the various graphical file transfer programs that are available is beyond the scope of this help, but you’ll have many options to pick from regardless of which platform you use. Most of them utilise the same underlying SSH mechanism as the <code class="docutils literal notranslate"><span class="pre">scp</span></code> and <code class="docutils literal notranslate"><span class="pre">rsync</span></code> tools described above.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Remember that any graphical tool you use needs to access your private key if connecting to <code class="docutils literal notranslate"><span class="pre">gruffalo</span></code> away from a <a class="reference internal" href="organizations.html"><span class="doc">Supported Organisations</span></a> network.</p>
+</div>
+<p>Here are a few recommended clients to get you started:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/SSHFS">SSHFS</a> - all platforms, although it can be a little tricky to set up, especially on Windows</p></li>
+<li><p><a class="reference external" href="https://filezilla-project.org/">FileZilla</a> - all platforms</p></li>
+<li><p><a class="reference external" href="https://cyberduck.io/">CyberDuck</a> - macOS or Windows, suggest setting double click to open in editor</p></li>
+<li><p><a class="reference external" href="https://mobaxterm.mobatek.net/download-home-edition.html">MobaXterm</a> - Windows only, but enables a graphical file browser in addition to normal SSH functionality</p></li>
+<li><p><a class="reference external" href="https://winscp.net/eng/index.php">WinSCP</a> - Windows only</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>JHI users can also enable <a class="reference internal" href="samba.html"><span class="doc">Samba Access</span></a> for easy graphical file browsing.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="backups.html" class="btn btn-neutral float-left" title="Backups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="samba.html" class="btn btn-neutral float-right" title="Samba Access" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

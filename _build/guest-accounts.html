@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Accounts &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Slurm - Overview" href="slurm-overview.html" />
+    <link rel="prev" title="Getting Connected" href="ssh.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Guest Accounts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#key-authentication">Key Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-using-the-ssh-command">Connecting using the SSH command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-using-mobaxterm">Connecting using MobaXterm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-using-putty">Connecting using PuTTY</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Guest Accounts</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/guest-accounts.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="guest-accounts">
+<h1>Guest Accounts<a class="headerlink" href="#guest-accounts" title="Permalink to this headline"></a></h1>
+<p>If you have been allocated a guest account on the Crop Diversity HPC system the method you need to use to connect is a slightly different from a normal user account. Guest accounts are temporary accounts created to give limited access to the system for training or similar purposes. You will have access to your own home folder and scratch folder locations but not to the shared project folders. For running jobs you’ll have access to compute servers on the <code class="docutils literal notranslate"><span class="pre">debug</span></code> queue of the SLURM job management system only.</p>
+<p>As with a normal user account you must log in to the main login server called <code class="docutils literal notranslate"><span class="pre">gruffalo</span></code> using the <strong>Secure Shell (SSH)</strong> protocol.</p>
+<p>If using Linux or macOS, then you’ll already have an SSH client installed that you can access via a local terminal. If using Windows, then you’ll have to install one or more new programs in order to connect, good options include <a class="reference external" href="https://mobaxterm.mobatek.net/download-home-edition.html">MobaXterm</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a> (Windows 10+ only), <a class="reference external" href="https://www.cygwin.com/">Cygwin/mintty</a> or <a class="reference external" href="https://www.putty.org/">PuTTY</a>.</p>
+<section id="key-authentication">
+<h2>Key Authentication<a class="headerlink" href="#key-authentication" title="Permalink to this headline"></a></h2>
+<p>We require guest accounts to authenticate using an SSH private key we will send to you. This is a special file giving you permission to login. We’ll send two versions of this private key, due to the putty program requiring a different format than all the other programs, to allow you to use putty if you wish. The private key files will be called guestxxx_key (generic format) and guestxxx_key_putty.ppk (putty format), where xxx is replaced by the number of you specific guest account. Both private key files are protected by a passphrase (a type of password) that you must type in when connecting, which we’ll also provide to you.</p>
+<p>It is vital that you keep the private key files and the passphrase safe while you guest account is active, as otherwise hackers could use them to gain unauthorised access to the system. Only store the key files in a secure location on your computer, and never on a shared network drive accessible to others. Do not save the passphrase in a file on the same computer as the private key file.</p>
+<p>Once your guest account expires, such as after the training sessions are finished, all the files created on the system will be wiped and the private key will be revoked so that it no longer grants access.</p>
+</section>
+<section id="connecting-using-the-ssh-command">
+<h2>Connecting using the SSH command<a class="headerlink" href="#connecting-using-the-ssh-command" title="Permalink to this headline"></a></h2>
+<p>On a Mac or Linux computer, or on Windows using WSL, Cygwin, Mobaxterm etc you have access to a command line environment providing the <code class="docutils literal notranslate"><span class="pre">ssh</span></code> command which will allow you to connect to Crop Diversity using the provided private key file. The command required to connect is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">i</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">guestxxx_key</span> <span class="n">guestxxx</span><span class="nd">@gruffalo</span><span class="o">.</span><span class="n">cropdiversity</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span>
+</pre></div>
+</div>
+<p>where you must replace <code class="docutils literal notranslate"><span class="pre">path/to/guestxxx_key</span></code> with the full path to the location you saved the generic private key file. On Mac or Linux make sure only your user has permissions to read the private key file or the command will refuse to run. You can fix this using the command <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">og-wrx</span> <span class="pre">guestxxx_key</span></code>.</p>
+<p>The first time you connect you may be asked to confirm you trust the identity of the remote server, by checking its finger print. See <a class="reference external" href="ssh-terminal-pw.html">here</a> for the correct finger print values.</p>
+<p>You will then be prompted to enter the passphrase which you will have been provided with separately.</p>
+</section>
+<section id="connecting-using-mobaxterm">
+<h2>Connecting using MobaXterm<a class="headerlink" href="#connecting-using-mobaxterm" title="Permalink to this headline"></a></h2>
+<p>MobaXterm also allows you to connect using a graphical interface without having to type in the <code class="docutils literal notranslate"><span class="pre">ssh</span></code> command manually. Do this as following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Session</span> <span class="o">-&gt;</span> <span class="n">SSH</span> <span class="o">-&gt;</span>
+   <span class="n">Basic</span> <span class="n">SSH</span> <span class="n">settings</span><span class="p">:</span>
+       <span class="n">Remote</span> <span class="n">host</span><span class="p">:</span> <span class="n">gruffalo</span><span class="o">.</span><span class="n">cropdiversity</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span>
+       <span class="n">Specify</span> <span class="n">username</span><span class="p">:</span> <span class="n">guestxxx</span>
+   <span class="n">Advanced</span> <span class="n">SSH</span> <span class="n">settings</span><span class="p">:</span>
+       <span class="n">Use</span> <span class="n">private</span> <span class="n">key</span><span class="p">:</span> <span class="n">browse</span> <span class="ow">and</span> <span class="n">select</span> <span class="n">guestxxx_key</span>
+</pre></div>
+</div>
+<p>Where xxx is replaced by the number of your guest account. Make sure you use guestxxx_key and not guestxxx_key_putty.ppk. As with the command line method you may be asked to verify the server’s fingerprint (see <a class="reference external" href="ssh-terminal-pw.html">here</a>). You’ll also have to enter the passphrase you’ll be provided you.</p>
+</section>
+<section id="connecting-using-putty">
+<h2>Connecting using PuTTY<a class="headerlink" href="#connecting-using-putty" title="Permalink to this headline"></a></h2>
+<p>Similarly PuTTY allows you to connect using a graphical interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Session</span><span class="p">:</span>
+   <span class="n">Hostname</span><span class="p">:</span> <span class="n">gruffalo</span><span class="o">.</span><span class="n">cropdiversity</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span>
+<span class="n">Connection</span> <span class="o">-&gt;</span> <span class="n">SSH</span> <span class="o">-&gt;</span> <span class="n">Auth</span>
+   <span class="n">Private</span> <span class="n">key</span> <span class="n">file</span> <span class="k">for</span> <span class="n">authentication</span><span class="p">:</span> <span class="n">browse</span> <span class="ow">and</span> <span class="n">select</span> <span class="n">guestxxx_key_putty</span><span class="o">.</span><span class="n">ppk</span>
+</pre></div>
+</div>
+<p>Where xxx is replaced by the number of your guest account. Make sure you use guestxxx_key_putty.ppk and not guestxxx_key. As with the command line method you may be asked to verify the server’s fingerprint (see <a class="reference external" href="ssh-terminal-pw.html">here</a>). You’ll also have to enter the passphrase you’ll be provided with.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ssh.html" class="btn btn-neutral float-left" title="Getting Connected" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="slurm-overview.html" class="btn btn-neutral float-right" title="Slurm - Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

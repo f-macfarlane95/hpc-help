@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Working with Compressed Files &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Apptainer (Singularity)" href="singularity.html" />
+    <link rel="prev" title="Compiling Software" href="compiling.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working with Compressed Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compressing-files">Compressing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#decompressing-files">Decompressing files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leaving-files-compressed">Leaving files compressed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#support-for-compressed-files">Support for compressed files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pipes">Pipes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#process-substitution">Process substitution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Working with Compressed Files</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/file-compression.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="working-with-compressed-files">
+<h1>Working with Compressed Files<a class="headerlink" href="#working-with-compressed-files" title="Permalink to this headline"></a></h1>
+<p>With storage space, and perhaps more importantly backup capacity, at a premium, it’s important to ensure that disk space is not wasted by leaving lots of large uncompressed (usually text) files lying around. Compressing text files – sequence data in particular – usually results in space savings of between 50 and 90%, so it is certainly worth the effort!</p>
+<section id="compressing-files">
+<h2>Compressing files<a class="headerlink" href="#compressing-files" title="Permalink to this headline"></a></h2>
+<p>To compress one or more files of a given type, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pigz *.txt
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">pigz</span></code> is a multicore aware version of <code class="docutils literal notranslate"><span class="pre">gzip</span></code> and performs significantly faster when multiple CPUs or cores are available for use.</p>
+</div>
+<p>While multicore is great, you might be running this as part of a job submission that only requested say, 4 cores, so it’s best to limit <code class="docutils literal notranslate"><span class="pre">pigz</span></code> in these cases:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pigz -p 4
+</pre></div>
+</div>
+</section>
+<section id="decompressing-files">
+<h2>Decompressing files<a class="headerlink" href="#decompressing-files" title="Permalink to this headline"></a></h2>
+<p>Ideally you shouldn’t have to decompress files (see below), but for completeness:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pigz -d *.gz
+</pre></div>
+</div>
+</section>
+<section id="leaving-files-compressed">
+<h2>Leaving files compressed<a class="headerlink" href="#leaving-files-compressed" title="Permalink to this headline"></a></h2>
+<p>Often, you never even need to decompress files, and one of the following three methods may work for input (or output) to an application, regardless of whether it’s designed to support compressed files.</p>
+<section id="support-for-compressed-files">
+<h3>Support for compressed files<a class="headerlink" href="#support-for-compressed-files" title="Permalink to this headline"></a></h3>
+<p>If a program supports compressed files as an input (or output), then simply feed it the name of your files, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./program input.txt.gz output.txt.gz
+</pre></div>
+</div>
+<p>Easy!</p>
+</section>
+<section id="pipes">
+<h3>Pipes<a class="headerlink" href="#pipes" title="Permalink to this headline"></a></h3>
+<p>If a program doesn’t support compressed files directly, but does support input/output streams, then you can decompress/compress the data files on the fly by using pipes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./program | pigz -cd input.txt.gz
+$ ./program | pigz -c &gt; output.txt.gz
+</pre></div>
+</div>
+<p>The first example takes <code class="docutils literal notranslate"><span class="pre">input.txt.gz</span></code> and decompresses it (with <code class="docutils literal notranslate"><span class="pre">pigz</span></code>) before feeding the uncompressed data into the program. The second example is simply the reverse, taking any uncompressed output data and compressing into a file called <code class="docutils literal notranslate"><span class="pre">output.txt.gz</span></code> as it’s generated.</p>
+</section>
+<section id="process-substitution">
+<h3>Process substitution<a class="headerlink" href="#process-substitution" title="Permalink to this headline"></a></h3>
+<p>Process substitution can be used when you have a program that not only expects a file handle (rather than a stream) but also doesn’t support compressed files. The bash shell is able to <em>fake</em> a handle to the program that is actually formed from the output of another program, such as decompressing a file. At no point does the file actually exist in its decompressed form.</p>
+<p>To use a compressed file as input via process substitution, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./program &lt;(pigz -cd input.txt.gz)
+</pre></div>
+</div>
+<p>To convert the output file of a program into a compressed file via process substitution, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./program &gt;(pigz output.txt.gz)
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not every program will support this, unfortunately. For instance, if a program expects to take a file and use it to determine a working directory where it can write more files to, then the above will likely fail.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="compiling.html" class="btn btn-neutral float-left" title="Compiling Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="singularity.html" class="btn btn-neutral float-right" title="Apptainer (Singularity)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

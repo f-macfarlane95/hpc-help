@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samba Access &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contact Us" href="contact-us.html" />
+    <link rel="prev" title="File Transfers" href="file-transfers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Samba Access</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#account-details">Account details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connection-details">Connection details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shared-folders">Shared folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#access-from-macos">Access from macOS</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">Tips &amp; Tricks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Samba Access</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/samba.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="samba-access">
+<h1>Samba Access<a class="headerlink" href="#samba-access" title="Permalink to this headline"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We can’t expose the ports Samba uses over the wider internet, so for now, access is only available if directly connecting to the cluster from the JHI network. We’re actively looking at options to improve this.</p>
+</div>
+<p>Samba provides an easy way to connect to Linux storage systems - such as our primary BeeGFS file system - and view, copy, edit, delete, etc any files that you have access to. Within Windows, the cluster can simply be mapped as a network drive and accessed via Windows Explorer.</p>
+<section id="account-details">
+<h2>Account details<a class="headerlink" href="#account-details" title="Permalink to this headline"></a></h2>
+<p>Samba uses its own authentication system, so you must first set a password for your account by visiting the following link and signing in with your Crop Diversity HPC username and password:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This link will <strong>not work</strong> if using Microsoft Edge.</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://help.cropdiversity.ac.uk/samba">Create/Update Samba Password</a></p></li>
+</ul>
+</section>
+<section id="connection-details">
+<h2>Connection details<a class="headerlink" href="#connection-details" title="Permalink to this headline"></a></h2>
+<p>The Samba server runs on <code class="docutils literal notranslate"><span class="pre">narnia</span></code>, and should always be specified using double backslash notation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\\<span class="n">narnia</span><span class="o">.</span><span class="n">cropdiversity</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span>
+</pre></div>
+</div>
+<p>You can either type this into Windows Search or Explorer’s navigation bar. Either way, you’ll then be asked for your username and the password you set above.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may need to supply your username preceded with dot backslash (eg <code class="docutils literal notranslate"><span class="pre">.\username</span></code>) to ensure no existing domain information from your Windows account is used.</p>
+</div>
+<p>The shares will appear in a new window that you can use to either browse or to right-click and map a network drive to.</p>
+</section>
+<section id="shared-folders">
+<h2>Shared folders<a class="headerlink" href="#shared-folders" title="Permalink to this headline"></a></h2>
+<p>Samba on <code class="docutils literal notranslate"><span class="pre">narnia</span></code> gives you access to (at least) the following shared folders:</p>
+<ul class="simple">
+<li><p>your private home directory at <code class="docutils literal notranslate"><span class="pre">/home/&lt;username&gt;</span></code></p></li>
+<li><p>the main shared storage directory at <code class="docutils literal notranslate"><span class="pre">/mnt/shared</span></code></p></li>
+</ul>
+<p>Other folders may be visible as well, but note that some may have restricted access.</p>
+</section>
+<section id="access-from-macos">
+<h2>Access from macOS<a class="headerlink" href="#access-from-macos" title="Permalink to this headline"></a></h2>
+<p>To access the shares from macOS, use the Finder’s menu to select Go, Connect to Server and enter <code class="docutils literal notranslate"><span class="pre">smb://narnia.cropdiversity.ac.uk</span></code> (or <code class="docutils literal notranslate"><span class="pre">cifs://narnia.cropdiversity.ac.uk</span></code>) as the server address. You’ll also need to supply your credentials (as detailed above) and decide which share to connect to.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="file-transfers.html" class="btn btn-neutral float-left" title="File Transfers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contact-us.html" class="btn btn-neutral float-right" title="Contact Us" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

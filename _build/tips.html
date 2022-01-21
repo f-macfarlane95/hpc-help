@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tips &amp; Tricks &mdash; Crop Diversity HPC Help  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Supported Organisations" href="organizations.html" />
+    <link rel="prev" title="Linux Basics" href="linux-basics.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Crop Diversity HPC Help
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system-overview.html">System Overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-accounts.html">Requesting an Account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Getting Connected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guest-accounts.html">Guest Accounts</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">High performance computing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slurm-overview.html">Slurm - Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-policy.html">Slurm - Queue Policies &amp; Advice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="slurm-shortcuts.html">Slurm - Shortcuts and Aliases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bioconda.html">Bioconda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compiling.html">Compiling Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine-learning.html">Machine Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="green-computing.html">Green Computing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Data storage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="data-storage.html">Data Storage &amp; Management Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backups.html">Backups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file-transfers.html">File Transfers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="samba.html">Samba Access</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Monitoring &amp; Tracking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux-basics.html">Linux Basics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tips &amp; Tricks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#special-keys">Special keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#history">History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clearing-the-screen">Clearing the screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-multiple-commands">Running multiple commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#following-log-files">Following log files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interactive-programming-and-data-analysis-using-a-jupyterlab-server">Interactive programming and data analysis using a JupyterLab server</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">The legal stuff</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="organizations.html">Supported Organisations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sla.html">Service Level Agreement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acceptable-use.html">Acceptable Use Policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gdpr.html">GDPR Privacy Notice</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Crop Diversity HPC Help</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tips &amp; Tricks</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/cropgeeks/hpc-help/blob/master/tips.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tips-tricks">
+<h1>Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Permalink to this headline"></a></h1>
+<p>Here are some handy tips and tricks that can make working with Linux - especially on the command line - that little bit easier.</p>
+<section id="special-keys">
+<h2>Special keys<a class="headerlink" href="#special-keys" title="Permalink to this headline"></a></h2>
+<p>Typing long file or directory names is annoying, but luckily there’s an easier way. You only need to type part of a name and then hit the <code class="docutils literal notranslate"><span class="pre">TAB</span></code> key – the Bash shell will autocomplete the rest of it for you. You can also use <code class="docutils literal notranslate"><span class="pre">HOME</span></code> to jump the cursor to the start of a line, and <code class="docutils literal notranslate"><span class="pre">END</span></code> to jump to the end of a line.</p>
+</section>
+<section id="history">
+<h2>History<a class="headerlink" href="#history" title="Permalink to this headline"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">UP</span></code> and <code class="docutils literal notranslate"><span class="pre">DOWN</span></code> arrow keys can be used to scroll backwards and forwards through recently entered commands. Resubmit a command by hitting <code class="docutils literal notranslate"><span class="pre">ENTER</span></code>, or even edit and then resubmit – this is great for when you’ve mistyped a long path and need to try again without having to retype everything.</p>
+<p>You can also use the <code class="docutils literal notranslate"><span class="pre">history</span></code> command to display a recent history of everything you’ve typed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ history
+1  cd /
+2  ll
+3  cd /mnt
+4  ls -l
+5  pwd
+</pre></div>
+</div>
+<p>If you see an entry you want to re-run, use <code class="docutils literal notranslate"><span class="pre">!</span></code> (called <em>bang</em> in the Linux world), followed by the number of the command as shown by <code class="docutils literal notranslate"><span class="pre">history</span></code>, eg <code class="docutils literal notranslate"><span class="pre">!5</span></code>.  You can use <code class="docutils literal notranslate"><span class="pre">!!</span></code> on its own to instantly repeat the previous command.</p>
+</section>
+<section id="clearing-the-screen">
+<h2>Clearing the screen<a class="headerlink" href="#clearing-the-screen" title="Permalink to this headline"></a></h2>
+<p>If you want to clear the screen of all text and move the cursor back to the top of your view, you can use the <code class="docutils literal notranslate"><span class="pre">clear</span></code> command. But if even that sounds like too much to type, <code class="docutils literal notranslate"><span class="pre">CTRL+L</span></code> will do it too.</p>
+</section>
+<section id="running-multiple-commands">
+<h2>Running multiple commands<a class="headerlink" href="#running-multiple-commands" title="Permalink to this headline"></a></h2>
+<p>If you want to run a bunch of commands one after another, but don’t want to wait on each one finishing first, then you could write (and run) a script containing all of the commands. But that’s a lot of work for just a few commands, which can just as easily be run this way:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make; make install;
+</pre></div>
+</div>
+<p>You can also string two commands together with the <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> operator, which ensures that the command following <code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code> only runs if the one before it succeeded, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make &amp;&amp; make install
+</pre></div>
+</div>
+</section>
+<section id="following-log-files">
+<h2>Following log files<a class="headerlink" href="#following-log-files" title="Permalink to this headline"></a></h2>
+<p>While <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">tail</span></code> can be used to look at the top or bottom of a file respectively, you can also use <code class="docutils literal notranslate"><span class="pre">tail</span></code> to <em>follow</em> along with a log file as it’s being created. This is great for watching the output of a program as it runs, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tail -f logfile.txt
+</pre></div>
+</div>
+<p>You can finish watching with a <code class="docutils literal notranslate"><span class="pre">CTRL+C</span></code>.</p>
+</section>
+<section id="interactive-programming-and-data-analysis-using-a-jupyterlab-server">
+<h2>Interactive programming and data analysis using a JupyterLab server<a class="headerlink" href="#interactive-programming-and-data-analysis-using-a-jupyterlab-server" title="Permalink to this headline"></a></h2>
+<p>JupyterLab is the next-generation web-based user interface for <a class="reference external" href="https://jupyter.org/documentation">Project Jupyter</a>. It allows you to work with documents such as Jupyter notebooks, python scripts, text editors, terminals, etc through a flexible, integrated, web front end. This is particularly useful if you want to do interactive coding on a cluster node rather than locally, functioning like an IDE with plugins for a range of languages. Most of the time you won’t need to do this; coding can be done locally and then run on the cluster when ready, however for some use-cases (e.g. deep learning model development) interactive development on significant hardware is particualrly important.</p>
+<p>In order to run JupyterLab on a cluster node, first build a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment with jupyterlab installed, connect to a cluster node, and activate the conda environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create --name jupyterlab jupyterlab
+$ srsh
+$ conda activate jupyterlab
+</pre></div>
+</div>
+<p>Running jupyterlab is straight-forward, however in order to allow a connect from our local web browser to the server on the cluster node we will need to route things through an SSH tunnel. For that, we will need to know the port that we want to access. We don’t strictly have to specify a port when running the server but since the default is a fixed number (8888) if ever two or more users try to run jupyter labs on the same cluster node they will all try to bind to this same port and an error will result. To avoid this it is highly recommended to specified a random port number with the <code class="docutils literal notranslate"><span class="pre">--port</span></code> option, eg 12345, but pick a random number of your own between 8000 and 50000 (don’t go outside of this range), then it’s very unlikely someone else will pick the same port as you on the same compute node. We need to specify the <code class="docutils literal notranslate"><span class="pre">--ip</span> <span class="pre">0.0.0.0</span></code> switch to allow JupyterLab to accept connections from other locations, and we want to tell it not to try to spawn a browser of its own with <code class="docutils literal notranslate"><span class="pre">--no-browser</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter-lab --no-browser --ip 0.0.0.0 --port 12345
+</pre></div>
+</div>
+<p>This will produce a few lines of output while it starts up, then ultimately provide you with something similar to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Or copy and paste one of these URLs:
+http://n19-32-192-hela.hpc.hutton.ac.uk:12345/?token=c4fc5b7c965fd5cc9940fcaed065d822483c6015c947a9cc
+or http://127.0.0.1:12345/?token=c4fc5b7c965fd5cc9940fcaed065d822483c6015c947a9cc
+</pre></div>
+</div>
+<p>This then gives us the URL we will point our browser to - <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:12345/?token=c4fc5b7c965fd5cc9940fcaed065d822483c6015c947a9cc</span></code> in this case - but it’ll be different each time you start jupyterlab.</p>
+<p>First though, we need to route our browser through an SSH tunnel for this port. To do that, in a local terminal (not on the cluster) we need to log into the cluster and enable port listening on the right port and pointing to the right host (in this example it was <code class="docutils literal notranslate"><span class="pre">hela</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh -L12345:hela:12345 username@gruffalo.cropdiversity.ac.uk
+</pre></div>
+</div>
+<p>Now all we need to do is paste the URL (<code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:12345/?token=c4fc5b7c965fd5cc9940fcaed065d822483c6015c947a9cc</span></code>) into our browser, and away we go!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="linux-basics.html" class="btn btn-neutral float-left" title="Linux Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="organizations.html" class="btn btn-neutral float-right" title="Supported Organisations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Information &amp; Computational Sciences, The James Hutton Institute.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
