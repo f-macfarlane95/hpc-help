@@ -59,7 +59,13 @@
 <li class="toctree-l1"><a class="reference internal" href="file-compression.html">Working with Compressed Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="singularity.html">Apptainer (Singularity)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gpu.html">GPU Processing</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Machine Learning</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Machine Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tutorial-series">Tutorial Series</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mask-rcnn">Mask RCNN</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="apps.html">Tools &amp; Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="database-mirrors.html">Database Mirrors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openmpi.html">OpenMPI</a></li>
@@ -164,6 +170,15 @@ Next we will train a model on some of the included test data that comes with the
 </pre></div>
 </div>
 <p>In production use you will obviously not have to create the conda environment or install tensorflow-gpu as you’ve now set those up in the above example. To run your own code you only need to use the srun commands to access the gpu node and then conda activate tensorflow-gpu-env.</p>
+<section id="tutorial-series">
+<h2>Tutorial Series<a class="headerlink" href="#tutorial-series" title="Permalink to this headline"></a></h2>
+<p>In this section tutorials for installing various common Machine Learning networks on the cluster will be given.
+Many existing tutorials exist, however they are often incomplete or outdated and do not consider the specific versions of packages required as they were written at the time when each package was current. In addition, each tutorial will cover running a demo of each network on the cluster and interacting via <code class="docutils literal notranslate"><span class="pre">jupyter-server</span></code> within a local browser window.</p>
+<section id="mask-rcnn">
+<h3>Mask RCNN<a class="headerlink" href="#mask-rcnn" title="Permalink to this headline"></a></h3>
+<p><a class="reference internal" href="ml-tut-maskrcnn.html"><span class="doc">Mask RCNN</span></a> [<a class="reference external" href="https://arxiv.org/abs/1703.06870">paper</a>, <a class="reference external" href="https://github.com/matterport/Mask_RCNN">code</a>] is a model used for instance segmentation, i.e., counting and segmenting the number of instances of various object classes within an image.</p>
+</section>
+</section>
 </section>
 
 

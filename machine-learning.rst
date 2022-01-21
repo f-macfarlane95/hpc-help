@@ -54,3 +54,18 @@ We are now ready to run the training, which should take about 30 seconds to run 
             validation_data=(test_images, test_labels))
 
 In production use you will obviously not have to create the conda environment or install tensorflow-gpu as you've now set those up in the above example. To run your own code you only need to use the srun commands to access the gpu node and then conda activate tensorflow-gpu-env.
+
+Tutorial Series
+---------------
+
+In this section tutorials for installing various common Machine Learning networks on the cluster will be given. 
+Many existing tutorials exist, however they are often incomplete or outdated and do not consider the specific versions of packages required as they were written at the time when each package was current. In addition, each tutorial will cover running a demo of each network on the cluster and interacting via ``jupyter-server`` within a local browser window.
+
+
+Mask RCNN
+~~~~~~~~~
+
+:doc:`ml-tut-maskrcnn` [`paper <https://arxiv.org/abs/1703.06870>`_, `code <https://github.com/matterport/Mask_RCNN>`_] is a model used for instance segmentation, i.e., counting and segmenting the number of instances of various object classes within an image.
+
+
+
